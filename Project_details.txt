@@ -1,0 +1,17 @@
+BYTE BUILDER
+Members:
+Ashish Jagiasi
+Laksh
+Deepesh Basantani
+Diren
+
+PROBLEM STATEMENT
+
+Build a Python FastAPI + Next.js app named "BioGuard" that automatically removes fingerprint lines from photos to prevent biometric identity theft.
+
+Pipeline Logic for AI Bot:
+1. Backend (FastAPI): Accept image upload -> Use Google MediaPipe Hands to detect human hands -> Extract the pixel coordinates of the 5 fingertips (Landmarks: 4, 8, 12, 16, 20).
+2. Processing (OpenCV): Create a dynamic bounding box around each fingertip coordinate -> Apply `cv2.bilateralFilter()` to smooth out the fine skin ridges (fingerprint texturing) while keeping the finger outline sharp -> Return the secure image.
+3. Frontend (Next.js): Clean dark-themed UI -> Drag-and-drop upload layout -> Side-by-side comparison screen (Left: original image with red warning markers over fingers; Right: protected image with a download button).
+
+Dependencies to use: FastAPI, opencv-python, mediapipe, Next.js, Tailwind CSS. Generate complete, production-ready code blocks without placeholders.
