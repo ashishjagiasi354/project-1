@@ -15,7 +15,7 @@ export default function PrivacyBot() {
     formData.append("file", file);
 
     try {
-      const response = await fetch("http://localhost:8000/protect-biometrics", {
+      const response = await fetch("https://biometric-protection-api.onrender.com/protect-biometrics", {
         method: "POST",
         body: formData,
       });
