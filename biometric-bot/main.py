@@ -5,8 +5,6 @@ from fastapi import FastAPI, UploadFile, File, HTTPException
 from fastapi.responses import StreamingResponse
 from fastapi.middleware.cors import CORSMiddleware
 
-print("NEW CODE LOADED ✅")
-
 # Try to import mediapipe
 try:
     import mediapipe as mp
